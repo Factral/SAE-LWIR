@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>  -->
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XB3PR2Y1TQ");
+    </script>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Set-Based Transformer for Atmospheric Compensation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- compare two images -->
+    <!-- <link rel="stylesheet" href="assets/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/bulma-slider.min.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <meta
+      property="og:site_name"
+      content="Set-Based Transformer for Atmospheric Compensation in Standoff LWIR Hyperspectral Imaging"
+    />
+    <meta property="og:type" content="video.other" />
+    <meta
+      property="og:title"
+      content="Set-Based Transformer for Atmospheric Compensation in Standoff LWIR Hyperspectral Imaging"
+    />
+    <meta
+      property="og:description"
+      content="Set-Based Transformer for Atmospheric Compensation in Standoff LWIR Hyperspectral Imaging - IGARSS 2026"
+    />
+
+    <script src="assets/js/video_comparison.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"
+    ></script>
+
+    <script src="assets/js/bulma-carousel.min.js"></script>
+    <script src="assets/js/bulma-slider.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      .small-bal-container {
+        width: 256px; /*296px*/ /* 540px; */ /* Set the desired width */
+        height: 256px; /* 302px; */ /* Set the height proportional to the aspect ratio (e.g., 16:9) */
+        margin: 0 auto; /* Center the images */
+        position: relative; /* Maintain the positioning for the slider and labels */
+        overflow: hidden; /* Ensure content stays within the container */
+      }
+      .small-bal-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure images scale proportionally */
+      }
+      @media (min-width: 768px) {
+        .right_container {
+          margin-left: 0;
+        }
+
+        .left_container {
+          margin-right: 0;
+        }
+      }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      display: none; /* Hide button by default until file is verified */
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    /* Optional: space between icon and text */
+    .btn i {
+      margin-right: 8px;
+    }
+
+    /* Responsive Intro Image */
+    .intro-image {
+      max-width: 40%;
+      height: auto;
+    }
+
+    @media (max-width: 992px) {
+      .intro-image {
+        max-width: 60%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro-image {
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .intro-image {
+        max-width: 90%;
+      }
+    }
+
+    .rainbow-text {
+      font-weight: bold;
+    }
+    </style>
+
+
+</head>
+
+  <body>
+    <div class="highlight-clean" style="padding-bottom: 1">
+      <div class="container" style="max-width: 100%; margin-bottom: 10px">
+            <div style="text-align: center; margin-bottom: 5px;">
+              <br> <br>
+                <h1 class="text-center" style="display: inline; margin: 0; font-family: Varela Round, sans-serif; font-weight: 400; color:#4d4d4d">
+                    Set-Based Transformeror Atmospheric Compensation <br> in Standoff LWIR Hyperspectral Imaging<br>
+          <span style="font-size: 0.5em; color: #4d4d4d">IGARSS 2026</span>
+                </h1>
+              </div>
+        </div>
+        <!-- AUTHORS -->
+        <div style="text-align: center; margin-bottom: 20px;">
+          <div style="font-size: 1.2em; font-weight: 500; line-height: 1.2;">
+            <span style="color: #2196f3;"><a href="https://www.factral.co/">Fabian Perez</a></span>,&nbsp
+            Nicolas Quintero,&nbsp
+            Jeferson Acevedo,&nbsp
+            <span style="color: #2196f3;"><a href="https://www.hfarueda.com/">Hoover Rueda-Chac&oacute;n</a></span>
+          </div>
+          <div style="font-size: 1em; margin-top: 8px;">
+            Universidad Industrial de Santander, Bucaramanga, Colombia
+          </div>
+          <div style="margin-top: 18px;">
+            <a href="#" class="btn" style="display: inline-block; background: #333; color: #fff; margin: 4px; border-radius: 1.2em; font-size: 1em; padding: 0.3em 1em; text-decoration: none;">
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="#" class="btn" style="display: inline-block; background: #333; color: #fff; margin: 4px; border-radius: 1.2em; font-size: 1em; padding: 0.3em 1em; text-decoration: none;">
+              <i class="fab fa-github"></i> Code
+            </a>
+            <a href="#" class="btn" style="display: inline-block; background: #333; color: #fff; margin: 4px; border-radius: 1.2em; font-size: 1em; padding: 0.3em 1em; text-decoration: none;">
+              <i class="fas fa-database"></i> Dataset
+            </a>
+          </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 10px;">
+        <img src="assets/intro.png" alt="Standoff LWIR imaging configuration" class="intro-image" />
+    </div>
+
+    <p
+      class="text-center"
+      style="padding-top: 10px; margin: 0 auto; max-width: 1100px"
+    >
+      <strong>TL;DR:</strong> We propose a lightweight set-based deep learning
+      framework that takes multiple radiance measurements at different standoff
+      ranges as input and jointly estimates transmittance, atmospheric path
+      radiance, and a shared downwelling spectrum for atmospheric compensation
+      in passive LWIR hyperspectral imaging.
+    </p>
+
+    <!-- <hr class="divider" /> -->
+    <br>
+    <div class="container" style="max-width: col-sm-12">
+
+      <!-- Presentation Video -->
+      <div class="row" style="justify-content: center">
+        <div class="col-md-8 text-center">
+          <video
+            src="assets/FullPresentation.mp4#t=6"
+            controls
+            preload="metadata"
+            style="width: 100%; height: auto"
+          ></video>
+          <p style="margin-top: 10px">Presentation Video</p>
+        </div>
+      </div>
+
+      <hr class="divider" />
+      <div class="container" style="max-width: col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 style="font-weight: bold">Abstract</h2>
+            <p style="text-align: justify">
+              Passive long-wave infrared (LWIR) hyperspectral imaging under a
+              standoff geometry depends on atmospheric absorption and emission,
+              as well as reflected radiance, thus making atmospheric
+              compensation essential to get knowledge of a target of interest.
+              Despite its importance, this compensation has been largely
+              overlooked due to its practical and modeling difficulty. In this
+              paper, we present a lightweight set-based deep learning framework
+              that takes multiple radiance measurements, collected at different
+              standoff ranges, as input and jointly estimates transmittance,
+              atmospheric path radiance, and a shared downwelling spectrum. We
+              analyze the learned representation with a sparse autoencoder and
+              observe that several latent features do activate on geographically
+              coherent subsets of the test data despite the absence of location
+              supervision. Experiments on a MODTRAN generated standoff LWIR
+              dataset demonstrate low spectral distortion across all estimated
+              products. The dataset and code will be made publicly available.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+      <div class="container" style="max-width: col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 style="font-weight: bold">Method</h2>
+
+            <div style="text-align: center; margin-bottom: 30px;">
+              <img src="assets/framework.png" alt="Proposed Framework" style="max-width: 100%; height: auto;" />
+            </div>
+
+              <h4 style="font-weight: bold">Sparse Autoencoder (SAE)</h4>
+              <p style="text-align: justify">
+                To analyze the learned representations, we train a sparse autoencoder on frozen encoder activations \(Z_2\). The SAE uses TopK gating with \(M = 3072\) features (\(12 \times d\)) and \(k = 16\), reconstructing token activations via an overcomplete sparse dictionary to expose physically meaningful latent structure.
+              </p>
+              <div style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
+                <img src="assets/SAE.png" alt="Sparse Autoencoder Pipeline" style="max-width: 60%; height: auto;" />
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+      <div class="container" style="max-width: col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 style="font-weight: bold">Results</h2>
+            <br/>
+
+            <h4 style="font-weight: bold; text-align: center; margin-bottom: 15px">
+              Qualitative Results
+            </h4>
+            <div style="text-align: center; margin-bottom: 20px;">
+              <img src="assets/TUD.png" alt="Qualitative TUD estimation results" style="max-width: 100%; height: auto;" />
+            </div>
+            <p style="text-align: justify">
+              Predicted (dashed) and ground-truth (solid) spectra for transmittance \(Y_\tau\), atmospheric path radiance \(Y_a\), and downwelling \(y_d\) across the LWIR window. The left column shows the full spectral range while the right column provides a zoomed view, highlighting that the network preserves fine-grained spectral structure.
+            </p>
+
+            <h4 style="font-weight: bold; text-align: center; margin-bottom: 15px; margin-top: 30px;">
+              SAE Interpretability Analysis
+            </h4>
+            <div style="text-align: center; margin-bottom: 20px;">
+              <img src="assets/analysis.png" alt="SAE top-activating geographic clusters" style="max-width: 70%; height: auto;" />
+            </div>
+            <p style="text-align: justify">
+              Top-activating locations for two SAE features. Each point denotes a test sample among the highest activations. For multiple features, the highest-activation examples consistently correspond to radiance sets originating from highly similar geographic regions, despite the fact that the network is never provided with explicit location. This emergent behavior suggests that the model organizes features by clustering atmospheres with similar physical conditions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+      <div class="container" style="max-width: col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 style="font-weight: bold">Citation</h2>
+            <p>If you find this work useful, please cite our paper:</p>
+
+            <div style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.4;">
+              <pre style="margin: 0; white-space: pre-wrap;">@inproceedings{perez2026settransformer,
+  title={Set-Based Transformer for Atmospheric Compensation in Standoff LWIR Hyperspectral Imaging},
+  author={Perez, Fabian and Quintero, Nicolas and Acevedo, Jeferson and Rueda-Chac{\'o}n, Hoover},
+  booktitle={IEEE International Geoscience and Remote Sensing Symposium (IGARSS)},
+  year={2026}
+}</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+         <h4 style="font-weight: bold; margin-bottom: 15px; margin-top: 20px; color: #333;">Contact</h4>
+         For any questions, please feel free to contact:
+         <br><br>
+         <ul style="list-style: none; padding-left: 0; margin-bottom: 20px;">
+           <li style="margin-bottom: 8px;"><strong>Fabian Perez:</strong> <a href="mailto:perez2258059@correo.uis.edu.co">perez2258059@correo.uis.edu.co</a></li>
+           <li style="margin-bottom: 8px;"><strong>Hoover Rueda-Chac&oacute;n:</strong> <a href="mailto:hfarueda@uis.edu.co">hfarueda@uis.edu.co</a></li>
+         </ul>
+
+         <hr style="margin: 20px 0; border: none; border-top: 1px solid #dee2e6;">
+
+         <div style="font-size: 14px; color: #666; line-height: 1.5;">
+           <p style="margin-bottom: 8px;">This website is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+           <p style="margin-bottom: 0;">We borrow the source code for our website. We sincerely appreciate <a href="https://dreamfusion3d.github.io/" target="_blank">DreamFusion</a> authors for their awesome templates.</p>
+         </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script> -->
+    <script src="assets/js/yall.js"></script>
+    <script>
+      yall({
+        observeChanges: true,
+      });
+    </script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

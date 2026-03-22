@@ -1,0 +1,12 @@
+{
+    "name": "Set-Based Transformer for Atmospheric Compensation in Standoff LWIR Hyperspectral Imaging",
+    "short_name": "SetTransformer-AC",
+    "icons": [{
+        "src": "assets/logo.png",
+        "sizes": "290x288",
+        "type": "image/png"
+    }],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
