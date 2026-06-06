@@ -1,0 +1,17 @@
+[project]
+name = "set-transformer-sae"
+version = "0.1.0"
+description = "Set Transformer for atmospheric radiative transfer + BatchTopK SAE interpretability"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "torch==2.9.1",
+    "numpy==1.26.4",
+    "scipy==1.15.3",
+    "matplotlib==3.7.5",
+    "wandb==0.23.1",
+    "tqdm==4.67.1",
+    "torchinfo==1.8.0",
+    "scikit-learn==1.7.2",
+    "pandas==2.3.3",
+    "cartopy==0.25.0",
+]
