@@ -3,6 +3,7 @@
 <div align="center">
 
 [![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://factral.github.io/SAE-LWIR)
+[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/SemilleroCV/SAE-LWIR)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
@@ -73,7 +74,11 @@ data/
 
 ### 📊 Dataset
 
-The dataset download link will be made available on the [project page](https://factral.github.io/SAE-LWIR).
+The dataset is hosted on Hugging Face: [SemilleroCV/SAE-LWIR](https://huggingface.co/datasets/SemilleroCV/SAE-LWIR)
+
+```bash
+hf download SemilleroCV/SAE-LWIR --repo-type dataset --local-dir data
+```
 
 ## 🎯 Usage
 
